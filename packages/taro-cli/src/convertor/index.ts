@@ -395,6 +395,7 @@ export default class Convertor {
         const transformResult = wxTransformer({
           code,
           sourcePath: file,
+          isNormal: true,
           isTyped: REG_TYPESCRIPT.test(file)
         })
         const { ast, scriptFiles } = this.parseAst({
