@@ -9,6 +9,7 @@ import * as minimatch from 'minimatch'
 import * as t from 'babel-types'
 import * as yauzl from 'yauzl'
 import { Transform } from 'stream'
+import { ICopyArgOptions, ICopyOptions, TogglableOptions } from '@tarojs/taro/types/compile'
 
 import defaultBabelConfig from '../config/babel'
 import defaultUglifyConfig from '../config/uglify'
@@ -26,7 +27,6 @@ import {
   REG_STYLE,
   UX_EXT
 } from './constants'
-import { ICopyArgOptions, ICopyOptions, TogglableOptions } from './types'
 import { callPluginSync } from './npm'
 
 const execSync = child_process.execSync
